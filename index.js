@@ -236,9 +236,10 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number) {
-  for (let i = number; i <= 1; i--) {
-    let newNumber = i - 1;
-    return "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {newNumber} bottles of soda on the wall";
+  for (let i = number; i >= 1; i--) {
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${
+      i - 1
+    } bottles of soda on the wall`;
   }
 }
 
