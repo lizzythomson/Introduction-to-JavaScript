@@ -1,5 +1,7 @@
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
+const { numberLiteralTypeAnnotation } = require("@babel/types");
+
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
 // task 1a, 1b, and 1c are not autograded
@@ -20,6 +22,12 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18;
+
+if (votingAge >= 18) {
+  console.log(true);
+}
+
 /*
 Task 1b - Values
 
@@ -30,6 +38,13 @@ Do the following:
 
    HINT: no function required
 */
+
+let faveFood = "pizza";
+let newFaveFood = "ice cream";
+
+faveFood = newFaveFood;
+
+console.log(faveFood);
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -42,6 +57,14 @@ Do the following:
    HINT: look up the Number method
 */
 
+let importantYear = "1999";
+
+Number(importantYear);
+
+if (typeof importantYear === "number") {
+  console.log(importantYear);
+}
+
 /*
 Task 1d - Multiply
  
@@ -51,9 +74,15 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/) {
-  /*add your code here*/
+function multiply(num1, num2) {
+  return num1 * num2;
 }
+
+const b = 7;
+
+const a = 10;
+
+multiply(a, b);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -65,9 +94,13 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/) {
-  /*add your code here*/
+function dogYears(age) {
+  return age * 7;
 }
+
+let age = 29;
+
+dogYears(age);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -136,7 +169,33 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer) {
-  /*add your code here*/
+  if (user === computer) {
+    return "it's a tie";
+  } else if (user === "Scissors" && computer === "Paper") {
+    return "you win!";
+  } else if (user === "Paper" && computer === "Rock") {
+    return "you win!";
+  } else if (user === "Rock" && computer === "Scissors") {
+    return "you win!";
+  } else {
+    return "you lose!";
+  }
+}
+
+let user = "Paper";
+
+function computer() {
+  let randomNumber = Math.round(Math.random() * 3);
+
+  if ((randomNumber = 1)) {
+    return "Scissors";
+  } else if ((randomNumber = 2)) {
+    return "Paper";
+  } else {
+    return "Rock";
+  }
+
+  computer();
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -150,8 +209,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/) {
-  /*add your code here*/
+function miles(kilometers) {
+  return kilometers * 0.621371;
 }
 
 //Task 5b - Feet to CM
@@ -162,8 +221,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/) {
-  /*add your code here*/
+function feet(cm) {
+  return cm / 30.48;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
