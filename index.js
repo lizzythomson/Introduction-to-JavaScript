@@ -59,7 +59,7 @@ Do the following:
 
 let importantYear = "1999";
 
-Number(importantYear);
+importantYear = Number(importantYear);
 
 if (typeof importantYear === "number") {
   console.log(importantYear);
@@ -171,28 +171,28 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 function game(user, computer) {
   if (user === computer) {
     return "it's a tie";
-  } else if (user === "Scissors" && computer === "Paper") {
+  } else if (user === "scissors" && computer === "paper") {
     return "you win!";
-  } else if (user === "Paper" && computer === "Rock") {
+  } else if (user === "paper" && computer === "rock") {
     return "you win!";
-  } else if (user === "Rock" && computer === "Scissors") {
+  } else if (user === "rock" && computer === "scissors") {
     return "you win!";
   } else {
     return "you lose!";
   }
 }
 
-let user = "Paper";
+let user = "paper";
 
 function computer() {
   let randomNumber = Math.round(Math.random() * 3);
 
   if ((randomNumber = 1)) {
-    return "Scissors";
+    return "scissors";
   } else if ((randomNumber = 2)) {
-    return "Paper";
+    return "paper";
   } else {
-    return "Rock";
+    return "rock";
   }
 
   computer();
@@ -235,8 +235,10 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/) {
-  /*add your code here*/
+function annoyingSong(startNumber) {
+  for (let i = startNumber; i <= 0; i--) {
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i} bottles of soda on the wall`;
+  }
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
